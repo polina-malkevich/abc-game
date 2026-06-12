@@ -1,0 +1,41 @@
+
+
+#right {
+  background:#6B8E23;
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  text-align: center;
+  font-size: 150pt;
+  font-weight:bolds ;
+  color:white;
+}   
+
+#left {
+ background:#6B8E23;
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  text-align: center;
+  font-size: 150pt;
+  font-weight:bolds ;
+  color:white;
+}   
+
+#center {
+    background:#B22222;
+  height: 500px;
+  width: 500px;
+  border-radius: 20%;
+  text-align: center;
+  font-size: 370pt;
+  font-weight:bolds ;
+  color:white; 
+}
+
+.container {
+  display: flex; /* Включаем Flexbox */
+  gap: 10px;     /* Расстояние между блоками (по желанию) */
+   justify-content: center; /* Центрирует элементы по горизонтали */
+  align-items: center;
+}
