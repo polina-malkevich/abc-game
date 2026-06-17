@@ -4,7 +4,7 @@
   width: 200px;
   border-radius: 20%;
   text-align: center;
-  font-size: 150pt;
+  font-size: 140pt;
   font-weight: bolds;
   color: white;
 }
@@ -15,15 +15,15 @@
   width: 200px;
   border-radius: 20%;
   text-align: center;
-  font-size: 150pt;
+  font-size: 140pt;
   font-weight: bolds;
   color: white;
 }
 
 #center {
   background: #B22222;
-  height: 500px;
-  width: 500px;
+  height: 550px;
+  width: 550px;
   border-radius: 20%;
   text-align: center;
   font-size: 370pt;
