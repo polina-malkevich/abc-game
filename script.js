@@ -1,6 +1,7 @@
 const alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".split("");
 let currentIndex = 0;
 let currentLetter = "А";
+randerAlphabet();
 
 const centrBlock = document.getElementById("center");
 centrBlock.addEventListener("click", function () {
@@ -36,3 +37,16 @@ rightButton.addEventListener("click", function () {
   speakText(currentLetter);
 });
 
+
+
+function randerAlphabet() {
+  console.log("randerAlphabet");
+  let alphabetContainer = document.getElementById("alphabet-container");
+  alphabet.forEach((letter, index)=>{
+    const newElement = document.createElement("div");
+    newElement.textContent = letter;
+    newElement.classList.add("letter-box");
+    alphabetContainer.append(newElement);
+  })
+
+}
