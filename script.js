@@ -46,6 +46,7 @@ function randerAlphabet() {
     const newElement = document.createElement("div");
     newElement.textContent = letter;
     newElement.classList.add("letter-box");
+    
     alphabetContainer.append(newElement);
   })
 

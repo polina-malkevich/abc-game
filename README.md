@@ -17,3 +17,4 @@ abc game for children
 - theme switch 
 
 - small alphabet in the botom 
+    - change style of current letter
