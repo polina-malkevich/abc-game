@@ -6,8 +6,6 @@ randerAlphabet();
 const centrBlock = document.getElementById("center");
 centrBlock.addEventListener("click", function () {
   console.log("centrButton");
-  centrBlock.textContent = currentLetter;
-
   speakText(currentLetter);
 });
 
@@ -20,6 +18,7 @@ leftButton.addEventListener("click", function () {
   currentIndex = currentIndex - 1;
   currentLetter = alphabet[currentIndex];
   centrBlock.textContent = currentLetter;
+  randerAlphabet();
   speakText(currentLetter);
 });
 
@@ -33,21 +32,24 @@ rightButton.addEventListener("click", function () {
   currentIndex = currentIndex + 1;
   currentLetter = alphabet[currentIndex];
   centrBlock.textContent = currentLetter;
-
+  randerAlphabet();
   speakText(currentLetter);
 });
-
-
 
 function randerAlphabet() {
   console.log("randerAlphabet");
   let alphabetContainer = document.getElementById("alphabet-container");
-  alphabet.forEach((letter, index)=>{
+  alphabetContainer.replaceChildren();
+  alphabet.forEach((letter, index) => {
     const newElement = document.createElement("div");
     newElement.textContent = letter;
     newElement.classList.add("letter-box");
-    
-    alphabetContainer.append(newElement);
-  })
+    if (index === currentIndex) {
+      newElement.classList.add("selected-letter-box");
+    } else {
+      newElement.classList.add("letter-box");
+    }
 
+    alphabetContainer.append(newElement);
+  });
 }

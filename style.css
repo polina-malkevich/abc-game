@@ -77,3 +77,15 @@ body {
   font-size: 24px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.selected-letter-box {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
