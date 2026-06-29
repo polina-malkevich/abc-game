@@ -4,8 +4,9 @@
   width: 200px;
   border-radius: 20%;
   text-align: center;
-  font-size: 140pt;
-  font-weight: bolds;
+  vertical-align: middle;
+  font-size: 100pt;
+  font-weight: bold;
   color: white;
 }
 
@@ -15,8 +16,9 @@
   width: 200px;
   border-radius: 20%;
   text-align: center;
-  font-size: 140pt;
-  font-weight: bolds;
+  vertical-align: middle;
+  font-size: 100pt;
+  font-weight: bold;
   color: white;
 }
 
@@ -24,13 +26,10 @@
   background: #B22222;
   height: 500px;
   width: 500px;
-  height: 500px;
-  width: 500px;
   border-radius: 20%;
   text-align: center;
-  font-size: 300pt;
-  font-size: 300pt;
-  font-weight: bolds;
+  vertical-align: middle;
+  font-size: 270pt;
   color: white;
 }
 
