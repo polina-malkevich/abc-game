@@ -1,15 +1,16 @@
 const alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".split("");
 let currentIndex = 0;
 let currentLetter = "А";
+const centrBlock = document.getElementById("center");
+const rightButton = document.getElementById("right");
+const leftButton = document.getElementById("left");
 randerAlphabet();
 
-const centrBlock = document.getElementById("center");
 centrBlock.addEventListener("click", function () {
   console.log("centrButton");
   speakText(currentLetter);
 });
 
-const leftButton = document.getElementById("left");
 leftButton.addEventListener("click", function () {
   console.log("leftButton");
   if (currentIndex === 0) {
@@ -22,7 +23,6 @@ leftButton.addEventListener("click", function () {
   speakText(currentLetter);
 });
 
-const rightButton = document.getElementById("right");
 rightButton.addEventListener("click", function () {
   console.log("rightButton");
   if (currentIndex === 32) {
@@ -40,8 +40,10 @@ function randerAlphabet() {
   console.log("randerAlphabet");
   let alphabetContainer = document.getElementById("alphabet-container");
   alphabetContainer.replaceChildren();
+  //
   alphabet.forEach((letter, index) => {
     const newElement = document.createElement("div");
+
     newElement.textContent = letter;
     newElement.classList.add("letter-box");
     if (index === currentIndex) {
@@ -49,7 +51,13 @@ function randerAlphabet() {
     } else {
       newElement.classList.add("letter-box");
     }
-
+    newElement.addEventListener("click", (event) => {
+      currentIndex = index;
+      currentLetter = letter;
+      centrBlock.textContent = currentLetter;
+      randerAlphabet();
+      speakText(currentLetter);
+    });
     alphabetContainer.append(newElement);
   });
 }
