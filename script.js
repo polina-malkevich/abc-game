@@ -28,7 +28,6 @@ rightButton.addEventListener("click", function () {
   if (currentIndex === 32) {
     return;
   }
-
   currentIndex = currentIndex + 1;
   currentLetter = alphabet[currentIndex];
   centrBlock.textContent = currentLetter;
@@ -43,14 +42,14 @@ function randerAlphabet() {
   //
   alphabet.forEach((letter, index) => {
     const newElement = document.createElement("div");
-
     newElement.textContent = letter;
-    newElement.classList.add("letter-box");
+ 
     if (index === currentIndex) {
       newElement.classList.add("selected-letter-box");
     } else {
       newElement.classList.add("letter-box");
     }
+
     newElement.addEventListener("click", (event) => {
       currentIndex = index;
       currentLetter = letter;
