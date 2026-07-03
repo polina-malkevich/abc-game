@@ -1,6 +1,8 @@
 const ruAlphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".split("");
 const enAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const bagrounds = ["images/bg1.jpg", "images/bg2.jpg", "images/bg3.jpg"];
 let alphabet = ruAlphabet;
+let bgIndex = 0;
 let currentLang = "ru";
 let currentIndex = 0;
 let currentLetter = "А";
@@ -8,6 +10,8 @@ const langBlock = document.getElementById("language");
 const centrBlock = document.getElementById("center");
 const rightButton = document.getElementById("right");
 const leftButton = document.getElementById("left");
+const body = document.getElementById("body");
+const bagroundButton = document.getElementById("baground");
 randerAlphabet();
 
 centrBlock.addEventListener("click", function () {
@@ -17,7 +21,7 @@ centrBlock.addEventListener("click", function () {
 
 leftButton.addEventListener("click", function () {
   console.log("leftButton");
-  if (currentIndex === 0) {
+  if (ccurrentIndex === 0) {
     return;
   }
   currentIndex = currentIndex - 1;
@@ -29,7 +33,10 @@ leftButton.addEventListener("click", function () {
 
 rightButton.addEventListener("click", function () {
   console.log("rightButton");
-  if (currentIndex === 32) {
+  if ((currentLang = "ru" && currentIndex === 32)) {
+    return;
+  }
+  if ((currentLang = "en" && currentIndex === 25)) {
     return;
   }
   currentIndex = currentIndex + 1;
@@ -37,6 +44,13 @@ rightButton.addEventListener("click", function () {
   centrBlock.textContent = currentLetter;
   randerAlphabet();
   speakText(currentLetter);
+});
+
+bagroundButton.addEventListener("click", function () {
+  console.log("bagroundButton");
+
+  body.style.backgroundImage = `url(${bagrounds[bgIndex]})`;
+  bgIndex = bgIndex + 1;
 });
 
 langBlock.addEventListener("click", function () {
@@ -50,7 +64,7 @@ langBlock.addEventListener("click", function () {
     currentLang = "ru";
   }
   langBlock.textContent = currentLang;
- 
+
   //и обновить currentIndex
   currentIndex = 0;
 
