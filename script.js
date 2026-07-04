@@ -51,6 +51,11 @@ bagroundButton.addEventListener("click", function () {
 
   body.style.backgroundImage = `url(${bagrounds[bgIndex]})`;
   bgIndex = bgIndex + 1;
+
+
+  if (bgIndex > bagrounds.length - 1) {
+    bgIndex = 0;
+  }
 });
 
 langBlock.addEventListener("click", function () {
