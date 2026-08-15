@@ -2,26 +2,54 @@
 <html lang="ru">
 
 <head>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Алфавит</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="style.css">
+
   <script src="script.js" defer></script>
   <script src="speak.js" defer></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Алфавит</title>
 </head>
 
 <body id="body">
+  <audio id="bg-music" loop>
+    <source src="music\bg-music-1.mp3" type="audio/mpeg">
+  </audio>
+
+
   <div class="container">
-    <div id="left">&lt;</div>
-    <div id="center">A</div>
-    <div id="right">&gt;</div>
+    <div class="row g-4 m-3 rounded text-center padding-top d-flex justify-content-center align-items-center user-select-none">
+
+      <div class="col-2 m-3 align-items-center">
+        <div class="h-50" id="left">&lt;</div>
+      </div>
+
+      <div class="col-6" id="center">A</div>
+
+      <div class="col-2 m-3 align-items-center ">
+        <div class="h-50" id="right">&gt;</div>
+      </div>
+
+    </div>
   </div>
 
-  <div id="alphabet-container"></div>
-  <div id="language">ru</div>
-  <div id="baground">bg</div>
-  <body">
 
+
+
+
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="p-auto mx-auto" id="alphabet-container"></div>
+      </div>
+      <div class="row d-flex justify-content-center align-items-center"> 
+      <div class="col-2 m-3 width: 70px; height: 70px; align-middle font-size:35pt; " id="language">ru</div>
+      <div class="col-2 m-3 width: 70px; height: 70px; align-middle" id="baground">bg</div>
+      <div class="col-2 m-3 width: 70px; height: 70px; align-middle" id="music-button">music</div>
+    </div>
+  </div>
 </body>
 
 </html>

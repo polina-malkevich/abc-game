@@ -12,6 +12,8 @@ const rightButton = document.getElementById("right");
 const leftButton = document.getElementById("left");
 const body = document.getElementById("body");
 const bagroundButton = document.getElementById("baground");
+const musicButton = document.getElementById("music-button");
+const music = document.getElementById("bg-music");
 randerAlphabet();
 
 centrBlock.addEventListener("click", function () {
@@ -19,9 +21,22 @@ centrBlock.addEventListener("click", function () {
   speakText(currentLetter);
 });
 
+musicButton.addEventListener("click", function () {
+  console.log("music");
+  music.volume = 0.1;
+
+  if (music.paused) {
+    music.play();
+    musicButton.textContent = "pause";
+  } else {
+    music.pause();
+    musicButton.textContent = "play";
+  }
+});
+
 leftButton.addEventListener("click", function () {
   console.log("leftButton");
-  if (ccurrentIndex === 0) {
+  if (currentIndex === 0) {
     return;
   }
   currentIndex = currentIndex - 1;
@@ -51,7 +66,6 @@ bagroundButton.addEventListener("click", function () {
 
   body.style.backgroundImage = `url(${bagrounds[bgIndex]})`;
   bgIndex = bgIndex + 1;
-
 
   if (bgIndex > bagrounds.length - 1) {
     bgIndex = 0;

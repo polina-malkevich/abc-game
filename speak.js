@@ -6,7 +6,7 @@ function speakText(text) {
   }
 
   // Создаем объект с нужным текстом
-  const utterance = new SpeechSynthesisUtterance(text);
+  const utterance = new SpeechSynthesisUtterance(text.toLowerCase());
 
   // Настройки воспроизведения
   utterance.rate = 1; // Скорость (от 0.1 до 10)
