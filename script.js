@@ -48,10 +48,10 @@ leftButton.addEventListener("click", function () {
 
 rightButton.addEventListener("click", function () {
   console.log("rightButton");
-  if ((currentLang = "ru" && currentIndex === 32)) {
+  if ((currentLang === "ru" && currentIndex === 32)) {
     return;
   }
-  if ((currentLang = "en" && currentIndex === 25)) {
+  if ((currentLang === "en" && currentIndex === 25)) {
     return;
   }
   currentIndex = currentIndex + 1;
